@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Beep Game</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>    
+  <body>
+    <div class="container">
+      <h1>beep.</h1>
+
+      <p class="info">You have won! <a href="#" onclick="restart()">Restart!</a></p>
+
+      <table id="beep-game"></table>
+      
+      <p>Find pairs and clear the grid</p>
+      <p id="moves"></p>
+    </div>
+    
+    <script src="js/beeplay.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    var x = 4;
+    var y = 4;
+    
+    var game;
+
+    function restart() {
+      game = new BeepGame(x, y).render();
+      document.querySelector('p.info').style.display = 'none';
+    }
+    
+    restart();
+    </script>
+  </body>
+</html>
