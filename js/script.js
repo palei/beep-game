@@ -86,30 +86,26 @@ BeepGame.prototype.clickHandler = function(_this, _self) {
     var a = _self.active_item_1;
     var b = _self.active_item_2;
 
-    if (a && b) {
+    if (a && b && !a.isSameNode(b)) {
 
         document.querySelector('#moves').innerHTML = 'Moves: ' + ++_self.moves_done;
 
         if (a.getAttribute('beep') == b.getAttribute('beep')) {
-            if (!a.isSameNode(b)) {
-                ++_self.pairs_found;
+            ++_self.pairs_found;
 
-                _self.active_item_1.setAttribute('class', 'blank');
-                _self.active_item_2.setAttribute('class', 'blank');
+            a.setAttribute('class', 'blank');
+            b.setAttribute('class', 'blank');
 
-                _self.active_item_1.onclick = undefined;
-                _self.active_item_2.onclick = undefined;
-            } else {
-                _self.active_item_1.setAttribute('class', 'normal');
-                _self.active_item_2.setAttribute('class', 'normal');   
-            }
+            a.onclick = undefined;
+            b.onclick = undefined;
+        
         } else {
-            _self.active_item_1.setAttribute('class', 'normal');
-            _self.active_item_2.setAttribute('class', 'normal');
+            a.setAttribute('class', 'normal');
+            b.setAttribute('class', 'normal');
         }
+
         _self.active_item_1 = undefined;
         _self.active_item_2 = undefined;
-
     }
 
     if (_self.pairs_found == _self.size / 2) {
