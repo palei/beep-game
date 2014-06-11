@@ -28,7 +28,7 @@ p {
 }
 
 table {
-    background-image: url('img/not_bad.jpg');
+    background-image: url('../img/not_bad.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     border-collapse: collapse;
