@@ -1,3 +1,5 @@
+/// git repo: https://github.com/palei/beep-game
+
 'use strict';
 
 Array.prototype.shuffle = function() {
@@ -73,6 +75,8 @@ BeepGame.prototype.render = function() {
 BeepGame.prototype.clickHandler = function(_this, _self) {
 
     beeplay().play(_this.getAttribute('beep'), 1/2);
+
+    console.info(_this.getAttribute('beep')); // for debug
 
     _this.setAttribute('class', 'active');
 
