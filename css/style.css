@@ -17,7 +17,6 @@ p.info {
     margin-bottom:10px;
 }
 
-
 h1 {
     text-align: center;
     font-size: 4em;
@@ -29,7 +28,9 @@ p {
 }
 
 table {
-    background-color: white;
+    background-image: url('img/not_bad.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     border-collapse: collapse;
     width: 100%;
     margin: 0 auto;

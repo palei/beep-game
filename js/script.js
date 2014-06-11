@@ -99,6 +99,9 @@ BeepGame.prototype.clickHandler = function(_this, _self) {
 
                 _self.active_item_1.onclick = undefined;
                 _self.active_item_2.onclick = undefined;
+            } else {
+                _self.active_item_1.setAttribute('class', 'normal');
+                _self.active_item_2.setAttribute('class', 'normal');   
             }
         } else {
             _self.active_item_1.setAttribute('class', 'normal');
